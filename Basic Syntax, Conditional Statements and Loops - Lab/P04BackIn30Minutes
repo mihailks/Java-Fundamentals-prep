@@ -1,0 +1,21 @@
+package BasicSyntaxConditionalStatementsandLoopsLab;
+
+import java.util.Scanner;
+
+public class P04BackIn30Minutes {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int hh = Integer.parseInt(scanner.nextLine());
+        int mm = Integer.parseInt(scanner.nextLine());
+
+        int totalMin = hh * 60 + mm + 30;
+
+        hh = totalMin / 60;
+        mm = totalMin % 60;
+        if (hh == 24) {
+            hh = 0;
+        }
+        System.out.printf("%d:%02d", hh, mm);
+    }
+}
